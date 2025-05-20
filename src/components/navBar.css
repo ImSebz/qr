@@ -2,8 +2,8 @@
     position: fixed;
     left: 0;
     top: 0;
-    width: 20.8%;
-    min-width: 220px;
+    width: 21%;
+    min-width: 400px;
     height: 100vh;
     background-image: linear-gradient(265deg, #00B3FF 0%, #1F0F97 100%);
     z-index: 1000;
@@ -175,7 +175,7 @@
 
 @media (max-width: 900px) {
     .navbar {
-        width: 80%;
+        width: 90%;
     }
 }
 
