@@ -1,0 +1,199 @@
+.page-line {
+    width: 60%;
+    height: 5px;
+    margin: 20px 0;
+    background: linear-gradient(to left, #03A3F6 0%, #FE00C0 50%, #1F0F97 100%);
+}
+
+.main-logo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.main-logo img {
+    height: 110px;
+    max-width: 100%;
+}
+
+.checker-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(100deg, #02A8F9 0%, #1642B8 100%);
+    position: absolute;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.checker-title {
+    font-family: 'Unbounded', sans-serif;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.checker-description {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 1.2rem;
+    width: 60%;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.qr-input {
+    width: 100%;
+    max-width: 400px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.qr-output {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-direction: row;
+}
+
+.qr-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.qr-select-slider {
+    color: #fff;
+    font-family: 'Unbounded', sans-serif;
+}
+
+.qr-options-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.qr-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    gap: 20px;
+
+}
+
+.qr-buttons button {
+    width: 100%;
+    min-width: 300px;
+    height: 50px;
+    background-color: #02A8F9;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.qr-buttons button:hover {
+    background-color: #1642B8;
+}
+
+#canvas-size-slider {
+    accent-color: #ffffff;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .checker-title {
+        font-size: 2.2rem;
+    }
+    .checker-description {
+        width: 90%;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-logo img {
+        height: 70px;
+    }
+    .checker-title {
+        font-size: 1.5rem;
+    }
+    .checker-description {
+        width: 100%;
+        font-size: 0.95rem;
+    }
+    .qr-input {
+        font-size: 1rem;
+        height: 40px;
+    }
+
+    .qr-container {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .qr-container svg {
+        max-width: 95vw;
+        max-height: 60vw;
+    }
+
+    .qr-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .qr-buttons button {
+        font-size: 1rem;
+        width: 70vw;
+        min-width: auto;
+        max-width: none;
+        height: 40px;
+    }
+    .qr-select-slider {
+        font-size: 0.95rem;
+    }
+    .qr-options-container {
+        padding: 10px;
+        gap: 10px;
+        margin-bottom: 100px;
+        margin-top: 0;
+    }
+    .qr-output {
+        margin-top: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+}
