@@ -5,16 +5,16 @@ import { faFacebookF, faInstagram, faLinkedinIn, faTiktok } from '@fortawesome/f
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const serviciosList = [
-    'Marketing de experiencias',
-    'Chatbots',
-    'Desarrollo web',
-    'Email marketing',
-    'Mensajería masiva',
-    'Pauta digital',
-    'Redes sociales',
-    'Posicionamiento SEO',
-    'Cosulta el dominio perfecto para ti',
-    'Generar código QR',
+    { label: 'Marketing de experiencias', url: '/marketing-de-experiencias' },
+    { label: 'Chatbots', url: '/chatbotschatbots-inteligentes-para-automatizar-tu-negocio-24-7chatbots' },
+    { label: 'Desarrollo web', url: '/diseno-web-responsive' },
+    { label: 'Email marketing', url: '/email-marketing-efectivo' },
+    { label: 'Mensajería masiva', url: '/mensajeria-masiva-efectiva' },
+    { label: 'Pauta digital', url: '/pauta-digital-efectiva' },
+    { label: 'Redes sociales', url: '/gestion-redes-sociales-efectiva' },
+    { label: 'Posicionamiento SEO', url: '/posicionamiento-seo-efectivo' },
+    { label: 'Cosulta el dominio perfecto para ti', url: '/consulta-dominios' },
+    { label: 'Generar código QR', url: '/generador-qr' },
 ];
 
 const NavBar = () => {
@@ -66,12 +66,11 @@ const NavBar = () => {
 
                 <div className={`navbar-links${menuOpen ? ' show' : ''}`}>
                     <a href="https://iglumarketingdigital.com/" className='navbar-link'>Inicio</a>
-                    <a href="" className='navbar-link'>Nosotros</a>
+                    <a href="https://iglumarketingdigital.com/agencia-de-marketing-digital/" className='navbar-link'>Nosotros</a>
                     <div
                         className={`navbar-link navbar-servicios-toggle${openServicios ? ' open' : ''}`}
                         onClick={() => setOpenServicios(!openServicios)}
                         tabIndex={0}
-                        onBlur={() => setOpenServicios(false)}
                     >
                         Servicios
                         <span className={`arrow${openServicios ? ' open' : ''}`}>▲</span>
@@ -79,12 +78,18 @@ const NavBar = () => {
                     {openServicios && (
                         <div className="navbar-servicios-list">
                             {serviciosList.map((servicio, idx) => (
-                                <a href="" className='navbar-link servicio-link' key={idx}>{servicio}</a>
+                                <a
+                                    href={servicio.url}
+                                    className='navbar-link servicio-link'
+                                    key={idx}
+                                >
+                                    {servicio.label}
+                                </a>
                             ))}
                         </div>
                     )}
-                    <a href="" className='navbar-link'>Portafolio</a>
-                    <a href="" className='navbar-link'>Blog</a>
+                    <a href="https://iglumarketingdigital.com/portafolio-proyectos-digitales/" className='navbar-link'>Portafolio</a>
+                    <a href="https://iglumarketingdigital.com/blog/" className='navbar-link'>Blog</a>
                 </div>
 
                 <div className={`navbar-social${menuOpen ? ' show' : ''}`}>
